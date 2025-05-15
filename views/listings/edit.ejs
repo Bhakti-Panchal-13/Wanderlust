@@ -1,0 +1,80 @@
+<% layout("/layouts/boilerplate.ejs") %>
+    <div class="row mt-3">
+        <div class="col-8 offset-2">
+    <h3>Edit your Listing</h3>
+    <form method="POST" action="/listings/<%=listing._id%>?_method=PUT" 
+        novalidate class="needs-validation" enctype="multipart/form-data">
+    <div class="mb-3">
+        <lable for="title" class="form-lable">Enter Title</lable>
+        <input name="listing[title]" value="<%=listing.title%>" type="text" class="form-control" required/>
+        <div class="valid-feedback">Title Looks good!</div>
+    </div>
+    <div class="mb-3">
+        <lable for="description" class="form-lable">Description</lable>
+        <textarea name="listing[description]" class="form-control" required><%=listing.description%></textarea>
+        <div class="invalid-feedback">Enter a short description</div>
+    </div>
+    <div class="mb-3">
+        <lable for="category" class="form-lable">Category</lable>
+    <div class="input-group mb-3">
+        <!-- <lable for="category" class="form-lable">Text input with dropdown button</lable> -->
+        <input type="text" class="form-control" id="categoryInput" name="listing[category]" value="<%=listing.category%>">
+        <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Dropdown</button>
+        <ul class="dropdown-menu dropdown-menu-end">
+          <li><a class="dropdown-item" href="#">Trending</a></li>
+          <li><a class="dropdown-item" href="#">Rooms</a></li>
+          <li><a class="dropdown-item" href="#">Iconic cities</a></li>
+          <li><a class="dropdown-item" href="#">Mountains</a></li>
+          <li><a class="dropdown-item" href="#">Castles</a></li>
+          <li><a class="dropdown-item" href="#">Amazing Pools</a></li>
+          <li><a class="dropdown-item" href="#">Camping</a></li>
+          <li><a class="dropdown-item" href="#">Farms</a></li>
+          <li><a class="dropdown-item" href="#">Arctic</a></li>
+          <li><a class="dropdown-item" href="#">Dome Stays</a></li>
+          <li><a class="dropdown-item" href="#">Boat</a></li>
+          <li><a class="dropdown-item" href="#">Desert Retreats</a></li>
+          <li><hr class="dropdown-divider"></li>
+          <li><a class="dropdown-item" href="#">Separated link</a></li>
+        </ul>
+        </div>
+      </div>
+        <div class="mb-3">
+            <img src="<%= originalImageUrl%>" height="200px" width="300px">
+        </div>
+    <div class="mb-3">
+        <lable for="image" class="form-lable">Upload New Image</lable>
+        <input name="listing[image]"  type="file" class="form-control" />
+    </div>
+    <div class="mb-3">
+
+        <lable for="price" class="form-lable">Price</lable>
+        <input name="listing[price]" value="<%=listing.price%>" type="number" class="form-control" required/>
+        <div class="invalid-feedback">Please enter a valid price</div>
+    </div>
+    <div class="row">
+    <div class="mb-3 col-md-8">
+        <lable for="location" class="form-lable">Location</lable>
+        <input name="listing[location]" value="<%=listing.location%>" type="text" class="form-control" required/>
+        <div class="invalid-feedback">Location should be valid</div>
+    </div>
+    <div class="mb-3 col-md-4">
+        <lable for="country" class="form-lable">Country</lable>
+        <input name="listing[country]" value="<%=listing.country%>" type="text" class="form-control" required/>
+        <div class="invalid-feedback">Country name should be valid</div>
+    </div>
+</div>
+        <button class="btn btn-dark edit-btn mt-3">Edit</button>
+        <br/><br/>
+    </form>
+</div>
+</div>
+<script>
+    document.querySelectorAll('.dropdown-item').forEach(item => {
+      item.addEventListener('click', function (e) {
+        e.preventDefault(); // Prevents the default link behavior
+        document.getElementById('categoryInput').value = this.textContent;
+      });
+    });
+  </script>
+
+

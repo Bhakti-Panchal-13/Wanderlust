@@ -1,0 +1,122 @@
+body {
+      font-family: "Plus Jakarta Sans", sans-serif !important;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+}
+/* .navbar-brand {
+    font-family: "Jersey 15", serif;
+  font-weight: 600;
+  font-size: 5rem;
+  font-style: normal;
+} */
+.container {
+    flex: 1;
+}
+/* navbar */
+ .navbar {
+    height:5rem;
+    background-color: white;
+ }
+ .fa-mountain-sun {
+    color: rgb(165, 6, 6);
+    font-size: 2rem;
+ }
+ /* .fa-solid {
+    color: rgb(165, 6, 6);
+    font-size: 2rem;
+ } */
+.nav-link {
+    color: #222222 !important;
+}
+
+/* Footer */
+.f-info-links a {
+    text-decoration: none ;
+    color: #5b5a5a ;
+    margin-right: 0.5rem;
+}
+.f-info-links a:hover {
+    text-decoration: underline;
+    color: black;
+}
+.f-info {
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: space-evenly;
+    height: 8rem;
+    background-color: #ebebeb;
+    
+}
+.f-info-links , .f-info-socials , .f-info-brand {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.f-info-socials i {
+    font-size: 1.2rem;
+    margin-right: 1rem;
+    color: rgb(68, 67, 67);
+}
+.f-info-socials i:hover{
+    font-size: 1.3rem;
+    color: rgb(31, 31, 31);
+}
+
+/* cards Styling */
+.listing-card {
+    margin-bottom: 2rem;
+    border: none !important;
+}
+.card-img-top {
+    border-radius: 1rem !important;
+    width: 100% !important;
+    height: 16rem;
+    object-fit: cover;
+}
+.card-body {
+    padding: 0 !important;
+}
+.card-text p {
+    font-weight: 400 !important;
+}
+.listing-link {
+    text-decoration: none;
+}
+
+.card-img-overlay {
+    opacity: 0;
+}
+.card-img-overlay:hover{
+    opacity: 0.2;
+    background-color: white;
+}
+/* New Page */
+
+.add-btn {
+    background-color: rgb(165, 6, 6) !important;
+    border: none !important;
+}
+
+/* Edit Page */
+
+.edit-btn {
+    background-color: rgb(165, 6, 6) !important;
+    border: none !important;
+}
+
+/* Show Page */
+.show-img {
+    height: 30vh;
+}
+.btns {
+    display: flex;
+}
+.show-card {
+    padding-left: 0;
+    padding-right: 0;
+}
+
